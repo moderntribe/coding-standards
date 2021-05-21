@@ -156,8 +156,6 @@
             <property name="linesCountAfterLastContent" value="0"/>
         </properties>
     </rule>
-    <!-- Require One Line Doc Comment where there's only 1 annotation present -->
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
 
     <!-- Slevomat control structures -->
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
