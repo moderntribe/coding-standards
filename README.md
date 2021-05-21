@@ -7,7 +7,7 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 
 Composer v2:
 
-`composer require --dev moderntribe/coding-standards`
+`composer require --dev moderntribe/coding-standards "^2.0"`
 
 Composer v1:
 
@@ -23,7 +23,7 @@ Add to the `repositories` object:
 And `require-dev`:
 
 ```json
-  "moderntribe/coding-standards": "^1.0"
+  "moderntribe/coding-standards": "^2.0"
 ```
 
 ## Project ruleset
