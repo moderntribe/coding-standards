@@ -4,9 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebbee17effa658326083b5422db290ec",
-    "packages": [],
-    "packages-dev": [
+    "content-hash": "a5a067a367893e5df66fd88fc554481b",
+    "packages": [
         {
             "name": "automattic/vipwpcs",
             "version": "2.3.2",
@@ -573,10 +572,11 @@
             "time": "2020-05-13T23:57:56+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.2 || ^8.0"
