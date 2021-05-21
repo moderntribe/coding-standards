@@ -24,6 +24,8 @@
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^7.0"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
       "sort-packages": true
     }
