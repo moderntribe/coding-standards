@@ -1,0 +1,30 @@
+{
+    "name": "moderntribe/coding-standards",
+    "description": "The Modern Tribe PHP coding standards PHPCS rules",
+    "type": "phpcodesniffer-standard",
+    "keywords": [
+      "phpcs",
+      "coding",
+      "standard",
+      "moderntribe",
+      "code",
+      "style",
+      "sniffer",
+      "rules",
+      "sniffs",
+      "checks"
+    ],
+    "license": "MIT",
+    "require": {
+      "php": "^7.2 || ^8.0"
+    },
+    "require-dev": {
+        "automattic/vipwpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "slevomat/coding-standard": "^7.0"
+    },
+    "config": {
+      "sort-packages": true
+    }
+}
