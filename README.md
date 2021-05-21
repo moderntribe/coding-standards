@@ -41,6 +41,11 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
     <arg name="cache" value=".phpcs-cache"/>
     <arg name="colors"/>
 
+    <!--  Update to the PHP version your production/local docker container runs on -->
+    <config name="testVersion" value="7.4"/>
+    <!-- php -r 'echo PHP_VERSION_ID;' -->
+    <config name="php_version" value="70407"/>
+
     <!-- Ignore warnings, show progress of the run and show sniff names -->
     <arg value="nps"/>
 
