@@ -10,4 +10,4 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 ## Resources:
 
 - [SquareOne Framework](https://github.com/moderntribe/square-one)
-- [Documentation](#)
+- [Documentation](https://github.com/moderntribe/square-one/blob/main/docs/tooling/phpcs.md)
