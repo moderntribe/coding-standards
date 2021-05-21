@@ -67,12 +67,12 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
 
 **PHPCS**
 ```bash
-./vendor/bin/phpcs --standard=ModernTribe <path_to_file(s)>
+./vendor/bin/phpcs --standard=ModernTribe /path/to/files/**.php
 ```
 
 **PHPCBF**
 ```bash
-./vendor/bin/phpcbf --standard=ModernTribe <path_to_file(s)>
+./vendor/bin/phpcbf --standard=ModernTribe /path/to/files/**.php
 ```
 
 ## Resources:
