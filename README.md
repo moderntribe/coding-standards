@@ -5,7 +5,26 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 
 ## Install
 
-`composer require moderntribe/coding-standards --dev`
+Composer v2:
+
+`composer require --dev moderntribe/coding-standards`
+
+Composer v1:
+
+Add to the `repositories` object:
+
+```json
+    {
+      "type": "vcs",
+      "url": "git@github.com:moderntribe/coding-standards.git"
+    },
+```
+
+And `require-dev`:
+
+```json
+  "moderntribe/coding-standards": "^1.0",
+```
 
 ## Resources:
 
