@@ -17,13 +17,13 @@ Add to the `repositories` object:
     {
       "type": "vcs",
       "url": "git@github.com:moderntribe/coding-standards.git"
-    },
+    }
 ```
 
 And `require-dev`:
 
 ```json
-  "moderntribe/coding-standards": "^1.0",
+  "moderntribe/coding-standards": "^1.0"
 ```
 
 ## Project ruleset
@@ -65,8 +65,14 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
  
 ## Manual Usage
 
+**PHPCS**
 ```bash
 ./vendor/bin/phpcs --standard=ModernTribe <path_to_file(s)>
+```
+
+**PHPCBF**
+```bash
+./vendor/bin/phpcbf --standard=ModernTribe <path_to_file(s)>
 ```
 
 ## Resources:
