@@ -5,7 +5,7 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 
 ## Install
 
-`composer require modern-tribe/coding-standards --dev`
+`composer require moderntribe/coding-standards --dev`
 
 ## Resources:
 
