@@ -1,6 +1,6 @@
 {
     "name": "moderntribe/coding-standards",
-    "description": "The Modern Tribe PHP coding standards PHPCS rules",
+    "description": "The Modern Tribe Coding Standard for PHPCS",
     "type": "phpcodesniffer-standard",
     "keywords": [
       "phpcs",
