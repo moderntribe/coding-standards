@@ -87,18 +87,26 @@
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
 
     <!-- Slevomat class formatting -->
+
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
     <!-- Checks lines count between different class members, eg. between last property and first method -->
     <rule ref="SlevomatCodingStandard.Classes.ClassMemberSpacing"/>
+    <!-- Checks that class/trait/interface members are in the correct order -->
+    <rule ref="SlevomatCodingStandard.Classes.ClassStructure"/>
+    <!-- Checks that there is a certain number of blank lines between constants -->
+    <rule ref="SlevomatCodingStandard.Classes.ConstantSpacing"/>
     <!-- Force spacing around a class definition -->
     <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces"/>
+    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
     <rule ref="SlevomatCodingStandard.Classes.PropertySpacing"/>
     <!-- Forbid uses of multiple traits separated by comma -->
     <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration"/>
     <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
     <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
     <!-- Require one space between typehint and variable, require no space between nullability sign and typehint -->
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing"/>
@@ -126,14 +134,28 @@
             <property name="searchAnnotations" value="1"/>
         </properties>
     </rule>
+    <!-- Checks for missing return typehints in case they can be declared natively -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation"/>
+    </rule>
     <!-- Require space around colon in return types -->
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
+    <!-- Force native php7.4+ property type hints -->
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
+    <!-- Force native php7.4+ parameter type hints -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation"/>
+    </rule>
 
     <!-- Slevomat array formatting -->
+
+    <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace">
         <properties>
@@ -142,12 +164,14 @@
     </rule>
 
     <!-- Slevomat functions -->
+
     <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
     <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall"/>
     <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue"/>
 
 
     <!-- Slevomat comment formatting -->
+
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
     <rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
@@ -158,7 +182,9 @@
     </rule>
 
     <!-- Slevomat control structures -->
+
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
     <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>
     <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
     <rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn"/>
@@ -181,10 +207,28 @@
     </rule>
 
     <!-- Slevomat exceptions -->
+
     <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
     <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
 
     <!-- Slevomat generic -->
+
     <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
     <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+
+    <!-- Slevomat operators -->
+
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+    <rule ref="SlevomatCodingStandard.Operators.SpreadOperatorSpacing">
+        <properties>
+            <property name="spacesCountAfterOperator" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- Slevomat variables -->
+
+    <!-- Looks for duplicate assignments to a variable -->
+    <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
 </ruleset>
