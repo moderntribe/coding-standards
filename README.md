@@ -7,7 +7,7 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 
 Composer v2:
 
-`composer require --dev moderntribe/coding-standards`
+`composer require --dev moderntribe/coding-standards "^1.0"`
 
 Composer v1:
 
