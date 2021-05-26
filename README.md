@@ -38,7 +38,6 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
     <arg name="severity" value="4"/>
     <arg name="tab-width" value="4"/>
     <arg name="parallel" value="80"/>
-    <arg name="cache" value=".phpcs-cache"/>
     <arg name="colors"/>
 
     <!--  Update to the PHP version your production/local docker container runs on -->
@@ -66,7 +65,7 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
 </ruleset>
 ```
 
-> Add `.phpcs-cache` and `phpcs.xml` to your `.gitignore`
+> Add `phpcs.xml` to your `.gitignore`
  
 ## Manual Usage
 
