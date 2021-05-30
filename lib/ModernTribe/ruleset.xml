@@ -229,6 +229,10 @@
 
     <!-- Looks for duplicate assignments to a variable -->
     <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
-    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
+        <properties>
+            <property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" value="1"/>
+        </properties>
+    </rule>
     <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
 </ruleset>
