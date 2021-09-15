@@ -55,6 +55,9 @@
         <exclude name="WordPressVIPMinimum.Constants.ConstantString.NotCheckingConstantName"/>
         <exclude name="WordPressVIPMinimum.Variables.VariableAnalysis"/>
     </rule>
+    <!-- Covers rule: Put spaces on both sides of the opening and closing parenthesis of
+       functions, methods, if, elseif, foreach, for, and switch blocks. -->
+    <rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/>
 
     <!-- Generic / Squiz -->
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
