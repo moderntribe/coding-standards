@@ -18,6 +18,7 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "automattic/vipwpcs": "^2.3",
+        "cweagans/composer-patches": "^1.7",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^7.0",
@@ -28,7 +29,16 @@
     "config": {
       "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         }
+    },
+    "extra": {
+      "enable-patching": true,
+      "patches": {
+        "wp-coding-standards/wpcs": {
+          "Add PHP 8 support until WordPress releases a new version": "patches/PHP-8-ControlStructureSpacing.patch"
+        }
+      }
     }
 }
