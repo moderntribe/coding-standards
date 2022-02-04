@@ -23,9 +23,24 @@
         "slevomat/coding-standard": "^7.0",
         "squizlabs/php_codesniffer": "^3.6"
     },
+    "require-dev": {
+      "cweagans/composer-patches": "^1.7"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-      "sort-packages": true
+      "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
+        }
+    },
+    "extra": {
+      "enable-patching": true,
+      "patches": {
+        "wp-coding-standards/wpcs": {
+          "Add PHP 8 support until WordPress releases a new version": "patches/PHP-8-ControlStructureSpacing.patch"
+        }
+      }
     }
 }

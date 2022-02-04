@@ -1,0 +1,65 @@
+From 7cd46bed1e6a7a2af3fe24c7f4a044da3076d8f4 Mon Sep 17 00:00:00 2001
+From: jrfnl <jrfnl@users.noreply.github.com>
+Date: Mon, 13 Jul 2020 10:16:43 +0200
+Subject: [PATCH] PHP 8 | ControlStructureSpacing: bug fix - $data should be an
+ array
+
+The `$data` parameter of the `$phpcsFile->add[Fixable]Error|Warning()` methods is expected to be an array, not a string.
+
+Without this fix, PHP 8 will throw and (uncaught) `TypeError: vsprintf(): Argument #2 ($args) must be of type array, string given`.
+---
+ .../Sniffs/WhiteSpace/ControlStructureSpacingSniff.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/WordPress/Sniffs/WhiteSpace/ControlStructureSpacingSniff.php b/WordPress/Sniffs/WhiteSpace/ControlStructureSpacingSniff.php
+index 5b7426fc..cbca5fe4 100644
+--- a/WordPress/Sniffs/WhiteSpace/ControlStructureSpacingSniff.php
++++ b/WordPress/Sniffs/WhiteSpace/ControlStructureSpacingSniff.php
+@@ -209,7 +209,7 @@ class ControlStructureSpacingSniff extends Sniff {
+ 						$error,
+ 						$stackPtr,
+ 						'SpaceBeforeFunctionOpenParenthesis',
+-						$this->tokens[ ( $function_name_ptr + 1 ) ]['content']
++						array( $this->tokens[ ( $function_name_ptr + 1 ) ]['content'] )
+ 					);
+ 
+ 					if ( true === $fix ) {
+@@ -282,7 +282,7 @@ class ControlStructureSpacingSniff extends Sniff {
+ 				$error,
+ 				$stackPtr,
+ 				'ExtraSpaceBeforeOpenParenthesis',
+-				$this->tokens[ ( $stackPtr + 1 ) ]['content']
++				array( $this->tokens[ ( $stackPtr + 1 ) ]['content'] )
+ 			);
+ 
+ 			if ( true === $fix ) {
+@@ -310,7 +310,7 @@ class ControlStructureSpacingSniff extends Sniff {
+ 					$error,
+ 					$stackPtr,
+ 					'ExtraSpaceAfterOpenParenthesis',
+-					$this->tokens[ ( $parenthesisOpener + 1 ) ]['content']
++					array( $this->tokens[ ( $parenthesisOpener + 1 ) ]['content'] )
+ 				);
+ 
+ 				if ( true === $fix ) {
+@@ -341,7 +341,7 @@ class ControlStructureSpacingSniff extends Sniff {
+ 							$error,
+ 							$stackPtr,
+ 							'ExtraSpaceBeforeCloseParenthesis',
+-							$this->tokens[ ( $parenthesisCloser - 1 ) ]['content']
++							array( $this->tokens[ ( $parenthesisCloser - 1 ) ]['content'] )
+ 						);
+ 
+ 						if ( true === $fix ) {
+@@ -399,7 +399,7 @@ class ControlStructureSpacingSniff extends Sniff {
+ 					$error,
+ 					$stackPtr,
+ 					'ExtraSpaceAfterCloseParenthesis',
+-					$this->tokens[ ( $parenthesisCloser + 1 ) ]['content']
++					array( $this->tokens[ ( $parenthesisCloser + 1 ) ]['content'] )
+ 				);
+ 
+ 				if ( true === $fix ) {
+-- 
+2.34.1
+
