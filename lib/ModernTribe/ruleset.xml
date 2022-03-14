@@ -108,7 +108,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="spacesCountAroundEqualsSign" value="0"/>
-            <property name="declareOnFirstLine" value="1"/>
+            <property name="declareOnFirstLine" value="true"/>
             <property name="linesCountAfterDeclare" value="1"/>
         </properties>
     </rule>
@@ -121,12 +121,12 @@
     </rule>
     <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility">
         <properties>
-            <property name="fixable" value="1"/>
+            <property name="fixable" value="true"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
         <properties>
-            <property name="searchAnnotations" value="1"/>
+            <property name="searchAnnotations" value="true"/>
         </properties>
     </rule>
     <!-- Require space around colon in return types -->
