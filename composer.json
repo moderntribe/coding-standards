@@ -18,6 +18,7 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "automattic/vipwpcs": "^2.3",
+        "cweagans/composer-patches": "^1.7",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^7.0",
@@ -31,5 +32,13 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true
         }
+    },
+    "extra": {
+      "enable-patching": true,
+      "patches": {
+        "wp-coding-standards/wpcs": {
+          "Add PHP 8 support until WordPress releases a new version": "https://github.com/WordPress/WordPress-Coding-Standards/commit/7cd46bed1e6a7a2af3fe24c7f4a044da3076d8f4.patch"
+        }
+      }
     }
 }
