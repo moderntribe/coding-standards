@@ -88,6 +88,11 @@
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <!-- Forbid deprecated functions -->
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <!-- Disable short echo tags. <?= $var; ?> -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
+        <severity>4</severity>
+        <type>warning</type>
+    </rule>
 
     <!-- Slevomat class formatting -->
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
