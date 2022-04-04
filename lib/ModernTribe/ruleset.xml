@@ -59,6 +59,13 @@
            functions, methods, if, elseif, foreach, for, and switch blocks. -->
     <rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/>
 
+    <!-- No short echos allowed. WordPress-VIP-GO overides the default 
+        severity.  -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
+        <severity>4</severity>
+        <type>warning</type>
+    </rule>
+
     <!-- Generic / Squiz -->
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
     <rule ref="Generic.Classes.OpeningBraceSameLine"/>
