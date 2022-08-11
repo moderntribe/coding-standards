@@ -3,12 +3,16 @@
 The Modern Tribe Coding Standard is a set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) 
 rules for use primarily with the [SquareOne](https://github.com/moderntribe/square-one) framework.
 
+## Requirements
+
+- PHP7.4+
+
 ## Install
 
 Composer v2:
 
 ```bash
-composer require --dev moderntribe/coding-standards "^2.0"`
+composer require --dev moderntribe/coding-standards "^3.0"`
 ```
 
 Composer v1:
@@ -25,7 +29,7 @@ Add to the `repositories` object:
 And `require-dev`:
 
 ```json
-  "moderntribe/coding-standards": "^2.0"
+  "moderntribe/coding-standards": "^3.0"
 ```
 
 ## Project ruleset
