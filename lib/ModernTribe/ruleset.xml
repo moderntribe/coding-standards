@@ -143,10 +143,8 @@
         </properties>
     </rule>
     <!-- Checks for missing return typehints in case they can be declared natively -->
-    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
-        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation"/>
-    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+	
     <!-- Require space around colon in return types -->
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
