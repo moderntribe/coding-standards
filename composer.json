@@ -16,7 +16,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.4",
+        "php": "^8.0",
         "automattic/vipwpcs": "^2.3",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
         "cweagans/composer-patches": "^1.7",

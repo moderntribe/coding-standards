@@ -5,7 +5,7 @@ rules for use primarily with the [SquareOne](https://github.com/moderntribe/squa
 
 ## Requirements
 
-- PHP7.4+
+- PHP ^8.0
 
 ## Install
 
@@ -34,40 +34,45 @@ And `require-dev`:
 
 ## Project ruleset
 
+> Ensure you're running PHP 8.0 locally!
+
 To use this ruleset, create a `phpcs.xml.dist` in the root of the project and add the following content:
 
 ```xml
 <?xml version="1.0"?>
 <ruleset>
-    <arg name="basepath" value="."/>
-    <arg name="extensions" value="php"/>
-    <arg name="severity" value="4"/>
-    <arg name="tab-width" value="4"/>
-    <arg name="parallel" value="80"/>
-    <arg name="colors"/>
+	<arg name="basepath" value="." />
+	<arg name="extensions" value="php" />
+	<arg name="severity" value="4" />
+	<arg name="tab-width" value="4" />
+	<arg name="parallel" value="80" />
+	<arg name="colors" />
 
-    <!--  Update to the PHP version your production/local docker container runs on -->
-    <config name="testVersion" value="7.4"/>
-    <!-- php -r 'echo PHP_VERSION_ID;' -->
-    <config name="php_version" value="70407"/>
+	<!--  Update to the PHP version your production/local docker container runs on -->
+	<config name="testVersion" value="8.0" />
+	<!-- php -r 'echo PHP_VERSION_ID;' -->
+	<config name="php_version" value="80022" />
 
-    <!-- Ignore warnings, show progress of the run and show sniff names -->
-    <arg value="nps"/>
+	<!-- Fix WordPress's terrible typing breaking PHPCS -->
+	<config name="minimum_supported_wp_version" value="5.6.0" />
 
-    <!-- Directories to be checked -->
-    <file>./wp-content/plugins/core</file>
-    <file>./wp-content/themes/core</file>
-    <file>./wp-content/mu-plugins</file>
+	<!-- Ignore warnings, show progress of the run and show sniff names -->
+	<arg value="nps" />
 
-    <!-- Exclude files -->
-    <exclude-pattern>*-config.php</exclude-pattern>
-    <exclude-pattern>*vendor/</exclude-pattern>
-    <exclude-pattern>*tests/*</exclude-pattern>
-    <exclude-pattern>*.twig</exclude-pattern>
-    <exclude-pattern>*webpack/</exclude-pattern>
+	<!-- Directories to be checked -->
+	<file>./wp-content/plugins/core</file>
+	<file>./wp-content/themes/core</file>
+	<file>./wp-content/mu-plugins</file>
 
-    <!-- Include the Modern Tribe coding standard -->
-    <rule ref="ModernTribe"/>
+	<!-- Exclude files -->
+	<exclude-pattern>*-config.php</exclude-pattern>
+	<exclude-pattern>*vendor/</exclude-pattern>
+	<exclude-pattern>*tests/*</exclude-pattern>
+	<exclude-pattern>*.twig</exclude-pattern>
+	<exclude-pattern>*webpack/</exclude-pattern>
+
+	<!-- Include the Modern Tribe coding standard -->
+	<rule ref="ModernTribe" />
 </ruleset>
 ```
 
