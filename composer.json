@@ -17,9 +17,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
-        "automattic/vipwpcs": "^2.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "php": ">=8.0",
+        "automattic/vipwpcs": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1 | ^1.0",
         "cweagans/composer-patches": "^1.7",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "slevomat/coding-standard": "^8.0",

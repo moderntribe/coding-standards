@@ -24,3 +24,4 @@ pimple.json
 vendor/
 phpcs.xml
 phpcs.log
+/composer.lock
