@@ -1,6 +1,6 @@
 # Modern Tribe Coding Standards
 
-The Modern Tribe Coding Standard is a set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) 
+The Modern Tribe Coding Standard is a set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 rules for use primarily with the [SquareOne](https://github.com/moderntribe/square-one) framework.
 
 ## Requirements
@@ -30,6 +30,14 @@ And `require-dev`:
 
 ```json
   "moderntribe/coding-standards": "^3.0"
+```
+
+Ensure to enable composer patching in your project's composer.json to fix broken PHPCS rules:
+
+```json
+"extra": {
+  "enable-patching": true
+}
 ```
 
 ## Project ruleset
@@ -77,7 +85,7 @@ To use this ruleset, create a `phpcs.xml.dist` in the root of the project and ad
 ```
 
 > Add `phpcs.xml` to your `.gitignore`
- 
+
 ## Manual Usage
 
 **PHPCS**
