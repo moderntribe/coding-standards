@@ -32,14 +32,6 @@ And `require-dev`:
   "moderntribe/coding-standards": "^3.0"
 ```
 
-Ensure to enable composer patching in your project's composer.json to fix broken PHPCS rules:
-
-```json
-"extra": {
-  "enable-patching": true
-}
-```
-
 ## Project ruleset
 
 > Ensure you're running PHP 8.0 locally!
